@@ -1,0 +1,143 @@
+<!-- wp:heading -->
+<h2><strong>"Linear Regression"</strong></h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>อัลกอริทึมแรกที่เราจะพูดถึงคือ <strong>Linear Regression</strong> ซึ่งเป็นหนึ่งในอัลกอริทึมของ <strong>"Supervised Learning"</strong> ที่ได้กล่าวถึงไปในบทความตอนที่ 1 ลองนึกภาพถ้าคุณมีบ้านที่ต้องการขายแต่ไม่รู้จะตั้งราคาที่เท่าไหร่ดีให้เหมาะสมกับท้องตลาด โดยราคาจะตั้งขึ้นจากขนาดพื้นที่ของบ้านตามข้อมูลกราฟ 2.1 ที่แสดงด้านล่าง</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"align":"center","width":324,"height":301} -->
+<div class="wp-block-image"><figure class="aligncenter is-resized"><img src="https://lh5.googleusercontent.com/h24fQGvgCnMzJFMjlR6UHMb6B-v_7M0_Fg2dNE3b7md1x-l871W2kbpOA63pQxeY_qNLK5Qsflk09nvbLi7JlCG5w_FjQiB530PX3d3L3jHVeNLBvp8K7Ueo-9lyo7J3mi6Tj2pr" alt="" width="324" height="301" title="Tap to Download"/><figcaption>รูป 2.1 ข้อมูลราคาบ้านตามขนาดพื้นที่ของบ้าน</figcaption></figure></div>
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+<p>เมื่อคุณได้เห็นข้อมูลของราคาบ้านตามขนาดพื้นที่ของหลังอื่นก็คงพอจะนำมาเปรียบเทียบเพื่อกำหนดราคาขายบ้านของตัวเองได้ใช่มั้ยครับ เช่นในกรณีที่บ้านของคุณมีขนาด 200 ตรม. คุณก็อาจจะกำหนดราคาที่ 110 ล้านบาทเพื่อให้เหมาะสมกับท้องตลาด</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4><strong>ตัวละครใน Linear Regression</strong></h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>[latexpage]</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>จากเรื่องการตั้งราคาบ้านเรามาคุยกันเรื่องตัวละครที่เราจะใช้เรียกในบทความนี้ ก่อนอื่นตาราง 2.1 คือข้อมูลที่เรามีที่แสดงราคาบ้านตามขนาดของพื้นที่บ้านที่ขายในท้องตลาด เราเรียกข้อมูลนี้ว่า <strong>"Training set"</strong> เป็นข้อมูลที่เราจะป้อนให้กับระบบเพื่อให้ระบบได้ทำการเรียนรู้ </p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>ตัวละครถัดมา <strong>"$m$" </strong>คือจำนวนของ ข้อมูลใน Training set เช่นข้อมูลราคาบ้านที่เราหามาได้มี 117 หลัง เพราะฉนั้น $m$ จึงเท่ากับ 117 สองตัว</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>จากข้อมูลที่เรามีถ้าผมลองถามว่าอะไรที่ส่งผลต่อราคาบ้านในท้องตลาด อะไรที่เป็นตัวแปร"อินพุท" ที่ทำให้ราคาบ้านเปลี่ยน.... ใช่ครับ ขนาดของบ้านก็คือตัวแปรอินพุท และราคาตามข้อมูลคือตัวแปรเอาท์พุทครับและละครอีกสองตัวที่ผมจะใช้คือ "$x$"และ<strong> </strong>"$y$" ซึ่ง x เราจะให้หมายถึงตัวแปรอินพุท(ขนาดพื้นที่ของบ้าน) และ y หมายถึงตัวแปร เอาท์พุท(ราคาบ้าน) ในกรณีที่ผมเรียก หนึ่งตัวอย่างของ Training set ผมจะใช้ $(x,y)$ โดยเราจะเรียกว่า <strong>"Training sample"</strong> หรือให้เห็นภาพชัดขึ้นเช่น ขนาดของบ้าน 102 ตรม จะราคาเท่ากับ 72 ล้านบาท (102,72) คือ $(x^{(2)},y^{(2)})$จากตรงนี้ $x$ และ $y$ ไม่ได้ยกกำลัง สอง แต่เป็นตำแหน่งของข้อมูล Training sample ใน Training set ของเรา เพราะฉนั้น $(x^{(i)},y^{(i)})$ ก็คือตำแหน่งของข้อมูลครับ&nbsp;</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"align":"center","width":466,"height":238} -->
+<div class="wp-block-image"><figure class="aligncenter is-resized"><img src="https://lh6.googleusercontent.com/r71zkJjFsdgmJet01r2YdzzgP035L1fOzBJAxo2OLXTo9fOB8kpNrm2Bm8_qokktLWKOxuCehKJ8fvsLEg1wm-JruJnJpKFTC64fvieERe5EBE0FAZ36QXBycm8aKYUGsJ_2odhy" alt="" width="466" height="238" title="Attachment"/><figcaption>&nbsp;รูป 2.2 ข้อมูลราคาบ้านตามขนาดพื้นที่ของบ้าน</figcaption></figure></div>
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+<p>จากที่เราได้ลองประเมิณราคาบ้านจากข้อมูล (Training set) ที่เราได้มาเรานำ Training set มาผ่าน <strong>"Learning</strong> <strong>Algorithm"</strong> ที่ทำให้ระบบได้เรียนข้อมูลที่เราป้อนให้&nbsp; ซึ่งหลังจากนั้นเราก็จะสามารถประเมิณราคาบ้านโดยป้อนอินพุทใหม่ซึ่งในกรณีนี้คือขนาดพื้นที่บ้านของเราที่ต้องการจะตั้งราคาให้กับ<strong>"Hypothesis"</strong> หรือ <strong>การตั้งสมมุติฐาน</strong> และเมื่อผ่านการตั้งสมมุติฐานแล้ว เราก็จะได้เอาท์พุทซึ่งเป็นราคาบ้านเราที่ต้องการให้เหมาะสมกับตลาด เดี๋ยวเราจะมาลงรายละเอียดในเรื่อง Hypothesis กันต่อในบทความนี้ครับ</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"align":"center","width":617,"height":223} -->
+<div class="wp-block-image"><figure class="aligncenter is-resized"><img src="https://lh6.googleusercontent.com/4kzM69evxVUUVAoHJ4Juww7-xD21vn4N38xX7Zj51NkMXdGE7nFdd2p0IayAwNl0aCBLDainbAKjEqBLvii2DZ0GDRqsPcKm1s8_zf16725v_wEX_qYTt50vz16hb00PxtNygIg0" alt="" width="617" height="223" title="Attachment"/><figcaption>รูป 2.3 โมเดลแสดงกระบวนการในระบบ Supervised Learning</figcaption></figure></div>
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+<p></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4><strong>Hypothesis&nbsp;</strong></h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>ในรูป 2.4 แสดงข้อมูลราคาบ้านตามพื้นที่ขนาดของบ้านก็คงพอทำให้เราเห็นกราฟ<strong>"เส้นตรง"</strong>ที่ลากผ่านกลุ่มกากบาทซึ่งเป้าหมายของเราคือการเลือกตำแหน่งที่เส้นจะลากไปหรือการหาค่าของ $\theta_{0},\theta_{1}$ที่เหมาะสมที่สุดเพื่อทำให้เส้นสีฟ้าของเราใกล้กับกากบาทให้มากที่สุดเพื่อให้การตั้งราคาของเราเหมาะสมที่สุดกับตลาด แล้วอะไรคือ $\theta_{0},\theta_{1}$?? &nbsp;</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"align":"center","width":344,"height":287} -->
+<div class="wp-block-image"><figure class="aligncenter is-resized"><img src="https://lh5.googleusercontent.com/owUtmXGaTMd178I82yiUlg7NUMK8JE48ZgTpREn2PzGbvSfjBCcM7MwtJ7yqbVUwtMvrGf64ZR_Keq6Z4NXKbPBuVYOP92okZSAS1ubqXtNQJynQlDoU06sbEgF4qBbJ17jTBB8K" alt="" width="344" height="287" title="Tap to Download"/><figcaption>รูป 2.4 ข้อมูลราคาบ้านตามขนาดพื้นที่ของบ้าน</figcaption></figure></div>
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+<p></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>จากสมาการที่ของเราคือ $h_{\theta}(x) = \theta_{0}+\theta_{1}x$ ซึ่งความชันของกราฟเส้นตรงนี้จะขึ้นอยู่กับค่า $\theta_{1}$และเส้นจะตัดแกน y ที่ $\theta_{0}$เช่นในกรณีนี้ $\theta_{0}$ มีค่าเท่ากับศูนย์ คำถามคือ แล้วเราจะเลือกค่า $\theta_{0}$ และ $\theta_{1}$ ได้อย่างไร ก่อนอื่นเราจะมาทำความเข้าใจกันว่าถ้าค่า $\theta_{0}$ และ $\theta_{1}$ เปลี่ยนไปแล้วกราฟเส้นตรงของเราจะรูปร่างหน้าตาเป็นอย่างไร หลายท่านที่คุ้นเคยกับสมการเส้นตรงนี้อยู่แล้วก็สามารถข้ามได้เลยครับ&nbsp;</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>เริ่มจากลองคิดดูว่าเมื่อ $\theta_{0}= 2, \theta_{1}= 0$ กราฟควรจะออกมาเป็นแบบไหนระหว่าง (A) และ (B)</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"align":"center","id":1550,"width":612,"height":295,"sizeSlug":"large"} -->
+<div class="wp-block-image"><figure class="aligncenter size-large is-resized"><img src="https://www.blogmun.com/wp-content/uploads/2020/08/image-2.png" alt="" class="wp-image-1550" width="612" height="295"/></figure></div>
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+<p>ใช่ครับและคำตอบก็คือ (A) ข้อสังเกตุคือเมื่อ $\theta_{1}$ ที่คูณกับ $x= 0$ และ $h_{\theta}(x)$ ของเราก็จะมีค่าคงที่ ที่เท่ากับ $\theta_{0}$ หรือให้อธิบายอีกอย่างคือเมื่อเราลองแทน $\theta_{1} = 0$ ลงใน $h_{\theta}(x) = \theta_{0}+\theta_{1}x$ ดังนั้น $h_{\theta}(x) = 0$ ตลอด</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4><strong>Cost Function&nbsp;</strong></h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>ย้อนกลับไปที่เป้าหมายของเราคือหาค่า $\theta_{0}$,$\theta_{1}$ที่เหมาะที่สุดเพื่อให้ได้เส้น Hypothesis ของเราออกมาสอดคล้องกับ training set ของเรามากที่สุด โดยเราสามารถใช้สมการที่เรียกว่า <strong>"Cost Function"</strong> (สมการ 2.1)<strong> </strong>โดย $h_{\theta}(x)^{(i)}$ ก็คือ Hypothesis (สมการ 2.2) ของเรามาครอบด้วย <strong>"Squared error function"</strong> เพื่อที่จะได้หาตำแหน่งของเส้นที่ใกล้ที่สุดกับกากบาทสีแดงที่เป็น Training set ของเรา 　</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>\[j(\theta_{0},\theta_{1}) = \frac{1}{2m}\sum_{i=1}^{m}(h_{\theta}(x^{(i)}-y^{(i)}))^{2}............................................(2.1)\]</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>และ</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>\[h_{\theta}(x)^{(i)} = \theta_{0} + \theta_{1}x^{(i)}..............................................................(2.2)\]</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>แล้วเราจะทราบได้อย่างไรว่าค่า $\theta_{0}$,$\theta_{1}$ที่เราใช้เหมาะสมที่สุดแล้ว คำตอบคือเราต้องหาค่าที่ $j(\theta_{0},\theta_{1})$ ต่ำที่สุด หรือเราจะเรียกว่า “minimize $j(\theta_{0},\theta_{1})$” เท่าที่เส้นฟังก์ชั่น $h_{\theta}(x)$ จะใกล้กับ Training set ทุกตัว เราลองมาดูตัวอย่างเพื่อให้เห็นภาพชัดเจนยิ่งขึ้นครับ ที่กราฟฟังก์ชั่น $h_{\theta}(x)$ (รูป2.5) เราจะพบกากบาทสีแดง 3 จุดก็คือ Training set และเส้น Hypothesis&nbsp; ที่ลากผ่านและไม่ผ่าน Training set ของเรา คำถามคือเส้นที่ฟังก์ชั่น $h_{\theta}(x)$ เท่ากับเท่าไหร่ที่ Hypothesis หรือ $h_{\theta}(x)$ มีค่าเหมาะสมกับ Training set เรามากที่สุดคือ จากตัวอย่างนี้เราจะมาเริ่มที่ระบบของเรามีค่า $\theta_{0} = 0$ ดังนั้นเราก็เพียงสนใจแต่การหาค่าที่ $h_{\theta}(x) =&nbsp; \theta_{x}$&nbsp;&nbsp;&nbsp;</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>เมื่อ $\theta_{1} = 1$ แทนลงในสมการที่ 2.1 จะได้ผลลัพท์ของเส้น Hypothesis ออกมาผ่านจุดกากบาท (Training set) โดยมีค่าความแตกต่างในแนวแกน $y$ ระหว่างจุดบนเส้นที่ผ่านกากบาทเท่ากับศูนย์  </p>
+<!-- /wp:paragraph -->
+
+<!-- wp:code -->
+<pre class="wp-block-code"><code>\begin{equation} \label{eq1}
+\begin{split}
+j(\theta_{1})  &amp; = \frac{1}{2m}\sum_{i=1}^{m}(h_{\theta}(x^{(i)}-y^{(i)}))^{2} \\
+ &amp; = \frac{1}{2m}(0^2+0^2+0^2) \\
+ &amp; = 0^2
+\end{split}
+\end{equation}</code></pre>
+<!-- /wp:code -->
+
+<!-- wp:paragraph -->
+<p>ต่อไปลองเปลี่ยนค่า ,$\theta_{1}$ เมื่อ 1= 0.5 แทนลงในสมการที่ 2.1 จะได้ผลลัพท์ดังนี้</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:code -->
+<pre class="wp-block-code"><code>\begin{equation} \label{eq2}
+\begin{split}
+j(\theta_{1})  &amp; = \frac{1}{(2)(3)}&#91;(0.5-1)^2+(1-2)^2+(1.5-3)^2] \\
+ &amp; = \frac{1}{(2)(3)}(3.5) \\
+ &amp; = \frac{3.5}{6} \simeq 5.8
+\end{split}
+\end{equation}</code></pre>
+<!-- /wp:code -->
