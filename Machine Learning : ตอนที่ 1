@@ -1,0 +1,67 @@
+<!-- wp:heading {"level":4} -->
+<h4><strong>เกี่ยวกับบทความนี้</strong></h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>ผมตั้งใจเขียนบทความนี้เขึ้นเพื่อ 1.ตีความและสรุปเป็นเนื้อหาตามที่ผมเข้าใจ 2.เพื่อยืนยันความเข้าใจของตนเองและฝึกฝนการตีความ และถ่ายทอดความรู้ในเรื่องของ Machine Learning จากการเรียนคอร์สออนไลน์ และรวมไปถึงหนังสือที่ผมได้อ่าน อาทิเช่น <a href="https://www.amazon.com/Deep-Reinforcement-Learning-Hands-Q-networks/dp/1788834240">Deep Reinforcement Learning Hands-On </a>&nbsp;by <a href="https://www.amazon.com/Maxim-Lapan/e/B07HKP6R6Z/ref=dp_byline_cont_book_1">Maxim Lapan</a>, <a href="https://www.amazon.com/gp/product/B07XGF2G87/ref=dbs_a_def_rwt_bibl_vppi_i0">Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow</a> by <a href="https://www.amazon.com/Aur%C3%A9lien-G%C3%A9ron/e/B004MOO740/ref=dp_byline_cont_book_1">Aurélien Géron</a> โดยเนื้อหาหลักมาจากคอร์สออนไลน์มาจาก<a href="https://www.coursera.org/learn/machine-learning/"> Coursera: Machine Learning</a> by<a href="https://www.coursera.org/instructor/andrewng"> Andrew Ng</a> (Standford University) ภาษาที่ใช้ในการเขียนหลักเป็นภาษาไทยแต่ยกเว้นศัพท์เฉพาะจำพวกชื่อ ผมขอนุญาติใช้คำภาษาอังกฤษ&nbsp;</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4><strong>"AI","Machine Learning","Deep Learning"</strong></h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>ทุกวันนี้เราคงได้ยินคำศัพท์ที่ใช้เรียกระบบอัจริยะในการใช้เทคโนโลยีของ "AI","Machine Learning","Deep Learning" ที่หลายคนอาจจะยังสงสัยถึงความแตกต่างหรือเหมือนกันของสิ่งเหล่านี้อยู่ และหลายท่านเมื่อพูดถึงสิ่งเหล่านี้ก็จะนึกถึง หุ่นยนต์จากภาพยนตร์เรื่องคนเหล็ก Terminator Skynet หรืออาจจะนึกถึง จาวิซในภาพยนตร์ ไอร่อนแมน อย่างไรก็ตาม “Machine Learning” ได้นำมาใช้อยู่ในชีวิตประจำวันของเรามาแล้วร่วมสิบปี เช่น แอฟพยากรณ์อากาศที่บอกสภาพอากาศล่วงหน้าให้เราทราบ หรือจะเป็นการแก้คำผิดเมื่อเราพิมพ์ผิด(Text auto correction) การพิมพ์ตัวอักษรให้เราจากเสียงที่เราพูด(Speech to text) หรือที่หลายท่านอาจคุ้นเคยกันดีกับ SIRI หรือ OK Google!! ที่สามารถพูดคุยตอบโต้และช่วยเราจัดการสิ่งต่างๆใน SmartPhone ของเรา</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"align":"center"} -->
+<div class="wp-block-image"><figure class="aligncenter"><img src="https://lh3.googleusercontent.com/LyX3LZ_NJxKVVWTDEajDVM4_KFRk9TD5H_T7n4qaOdhglQqZoShdZUIAqFQFVYSeZu361EOxUeW_dffFRaLPUch6yrTMxzwzlk9sVWsOjRDYaQKM1LZo1ULFrwLL1rfVaIQOiSxj" alt=""/><figcaption>รูป 1.0 แสดงความสัมพันธ์ของ "AI","Machine Learning"และ"Deep Learning"</figcaption></figure></div>
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+<p>แล้วมันต่างกันอย่างไรระหว่าง&nbsp; "AI","Machine Learning"และ"Deep Learning" จากภาพ 1.0 แสดงให้เห็นว่า Machine Learning เป็น Subset ของ AI และ Deep Learning ของ Machine Learning ดังนั้นความหมายของคำว่า AI จะกว้างมากเมื่อไหร่ที่เราได้ทำเครื่อง, หุ่นยนต์หรือกลไลอะไรสักอย่างเพื่อให้ทำงานหรือแก้ปัญหาได้ตามที่เรากำหนดไว้ด้วย”อัลกอลิทึม”ที่เราสร้างขึ้นมา เราเรียกว่า <strong>“</strong><strong>Artificial Intelligence”</strong> โดยหลักเราแบ่งออกเป็นสองประเภทคือ Weak AI เป็นประเภทที่ AI สามารถทำงานพื้นฐาน, ไม่ซับซ้อนและอาจทำงานได้เพียง1ประเภทเช่น ซึ่งแตกต่างจาก Strong AI คือสามารถทำงานที่ยากและซับซ้อนได้ซึ่งไม่ได้แปลว่าต้องทำงานได้หลายประเภทเช่น <a href="https://en.wikipedia.org/wiki/AlphaGo">AlphaGo</a> สำหรับท่านที่เคยเล่นหรือรู้จักอาจจะพอได้ยินมาบ้างในเรื่อง AI เกมส์กระดานโกะหรือหมากล้อมที่ผู้เล่นสองฝ่ายต้องวางหมากขาวหรือดำเพื่อแย่งพื้นที่บนกระดานให้ได้มากที่สุด โดยเจ้า <a href="https://en.wikipedia.org/wiki/AlphaGo">AlphaGo</a> ได้เอาชนะ<a href="https://www.bbc.com/news/technology-40042581#:~:text=Google's%20DeepMind%20AlphaGo%20artificial%20intelligence,AlphaGo%20right%20to%20the%20limit%22.">แชมป์โลก</a>ไปได้&nbsp;</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>ต่อมาเป็นสิ่งหลักที่เราจะคุยกันในบทความนี้คือ <strong>"Machine Learning" </strong>ซึ่งก็ตามชื่อที่ทำให้เราเห็น และเมื่อเราตีความได้คร่าวๆก็คือ <strong>การเพิ่มขีดความสามารถในการ “Learning”</strong> (เรียนรู้) ให้กับระบบที่เราต้องการสร้างให้ทำงานหรือแก้ปัญหาให้เรา โดยสิ่งที่แเพิ่มเติมหลักๆคือเราจะสอนระบบของเราให้เรียนรู้ได้อย่างไรเป็นสิ่งที่เราจะมาทำความเข้าใจกันในบทความซีรี่นี้ครับ อย่างที่ได้กล่าวไปในข้างต้นว่า Machine Learning เป็น Subset ของ AI ซึ่งสิ่งต่างๆที่เราจะเขียนในบทความนี้อยู่ภายใต้ความหมายของคำว่า AI ทั้งหมด&nbsp;</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>สุดท้ายกับ <strong>"Deep Learning"</strong> อย่างที่ได้กล่าวไปในข้างต้นว่า Deep Learning เป็น Subset ของ Machine Learning ให้เข้าใจง่ายๆก็คือเป็นหนึ่งในวิธีการที่ระบบเราสามารถเรียนรู้ข้อมูลที่นำวิธีมาจากแนวความคิดของการเรียนรู้แบบมนุษย์ ซึ่งเราจะมาคุยเรื่องนี้กันในบทความ <strong>Deep Learning ซีรี่</strong></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4><strong>"Supervised Learning","Unsupervised</strong> <strong>Learning", "Reinforcement Learning"</strong></h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>จากที่ได้กล่าวไปข้างต้นของเรื่องการเพิ่มขีดจำกัดการเรียนรู้ของระบบใน Machine Learning มีมากมายหลายประเภทแต่เราจะแบ่งประเภทหลักๆเป็น 3 ประเภทที่จะพูดถึงในบทความนี้ คือ “Supervised Learning” เปรียบเสมือนเราสอนให้ระบบของเราเรียนรู้การจัดการแก้ปัญหาและหาคำตอบโดยคำตอบนั้นได้ถูกสอนในกระบวนการ Training เช่น เรามีข้อมูลของราคาบ้านตามขนาดพื้นที่ของบ้านตามท้องตลาดจำนวน 100 หลังและเราต้องการที่จะตั้งราคาบ้านที่เรากำลังจะขายให้ไม่สูงไม่น้อยไปกว่าท้องตลาด ดังนั้นเราจะดูพื้นที่บ้านของเราเทียบกับข้อมูลพื้นที่บ้าน 100หลังที่เรามี และนำมาเปรียบเทียบกับบ้านของเราเพื่อตั้งราคา โดยแน่นอนว่าก่อนที่ระบบจะตั้งราคาให้บ้านของเราได้ ระบบก็ต้องเรียนรู้ราคาบ้าน 100 หลังจาก Training Set (ข้อมูบ้าน 100 หลัง) และนำข้อมูลใหม่ก็คือขนาดบ้านของเราและระบบก็จะคำนวณและได้คำตอบออกมาเป็นราคาบ้านที่เหมาะสมกับท้องตลาด</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>ต่อมาคือ “Unsupervised Learning” ที่ข้อมูลของเราจะไม่มีชนิดหรือประเภทระบุไว้แต่เราสามารถให้ระบบของเราเรียนรู้และแยกข้อมูลให้กับเราได้เช่น เรามีข้อมูลของสัตว์กลุ่มหนึ่งที่ไม่สามารถบอกได้ว่าคือสัตว์อะไรบ้าง โดยเรามีส่วนสูง, น้ำหนัก, อาหารที่สัตว์กิน, จำนวนขา เป็นต้น ระบบจะเรียนรุ้จากข้อมุลจำนวนมากจนสามารถแยกประเภทของสัตว์ออกมาได้</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>ประเภทสุดท้ายที่เราจะพูดถึงมีความใกล้เคียงกับการฝึกฝนสัตว์เลี้ยงให้ทำตามที่เราสั่ง เวลาที่เราฝึกสุนัขให้รอให้นั่งสิ่งที่เราจะเอามาล่อใจให้การฝึกสำเร็จก็คือ “รางวัล” เหมือนสุนัขจะค่อยๆเรียนรู้ ในช่วงแรกอาจจะมีการลองผิดลองถูก (ในช่วง Training) จนชำนาญรู้ว่าวทำอย่างไรถึงจะได้ขนม ดังที่แสดงในรูป 1.1 เมื่อให้สุนัขแทน Agent ที่จะทำการ Action อะไรบางอย่างเมื่อเจอ Environment ก็คือสัญญาณมือ อาจจะได้ Reward รางวัลหรือไม่ได้หรือรางวัลติดลบ(ตัวอย่าง: โดนทำโทษ) เป็นค่า Observation หรือสิ่งที่ได้จากการกระทำในทุกครั้งนั่นเอง เราเรียกการเรียนรู้ประเภทนี้ว่า "Reinforcement Learning" ซึ่งข้อดีอีกอย่างของวิธีนี้คือระบบของเราจะเรียนรู้ต่อไปเรื่อยๆถึงแม้จะจบช่วง Training แล้วซึ่งทำให้ระบบเราพัฒนาตามตัวแปรที่เปลี่ยนไปด้วย&nbsp;</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"align":"center","width":567,"height":339} -->
+<div class="wp-block-image"><figure class="aligncenter is-resized"><img src="https://lh5.googleusercontent.com/--yTQh_uCkXZQGETmfi8Mn-trSnH1ySBcy4k8GXfwGA0FKn1-1XeukbRHEvcugPtpdOJ6dxQ1UpZ3PCA828UpqUr-mrwYBKpOh1GjMwZok9iZW-PQ4x9xqXtP2AJAaNc1ZliPWIn" alt="" width="567" height="339"/><figcaption>รูป 1.1 แสดงกระบวนการเรียนรู้ของวิธี Reinforcement Learning</figcaption></figure></div>
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+<p>ในบทแรกนี้ได้สรุปความหมายของ "AI","Machine Learning","Deep Learning" โดยสังเขปซึ่งเราจะลงลึกในเรื่องของ Machine Learning กันในบทต่อไป และการเพิ่มขีดจำกัดการเรียนรู้ของระบบใน Machine Learning มีมากมายหลายประเภทแต่เราจะโฟกัสที่ Supervised Learning, Unsupervised Learningและ Reinforcement Learning ซึ่งจะพูดถึงกันในบทความถัดไป&nbsp;</p>
+<!-- /wp:paragraph -->
